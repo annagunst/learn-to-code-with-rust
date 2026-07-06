@@ -5,7 +5,7 @@ fn main() {
     println!("His first name is {first_name}.");
 
     let last_name = &action_hero[7..];
-    println!("His first name is {last_name}.");
+    println!("His last name is {last_name}.");
 
     let full_name = &action_hero[..];
     println!("His full name is {full_name}.");
