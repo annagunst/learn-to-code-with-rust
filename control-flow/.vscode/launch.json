@@ -1,0 +1,281 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug executable 'assigning_result_of_if_statement_to_variable'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=assigning_result_of_if_statement_to_variable"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'assigning_result_of_if_statement_to_variable'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=assigning_result_of_if_statement_to_variable"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'control-flow'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=control-flow"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'control-flow'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=control-flow"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'recursion'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=recursion"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'recursion'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=recursion"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_continue_keyword'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_continue_keyword"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_continue_keyword'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_continue_keyword"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_else_if_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_else_if_statement"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_else_if_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_else_if_statement"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_else_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_else_statement"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_else_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_else_statement"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_if_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_if_statement"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_if_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_if_statement"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_loop_and_break_keywords'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_loop_and_break_keywords"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_loop_and_break_keywords'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_loop_and_break_keywords"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_match_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_match_statement"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_match_statement'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_match_statement"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'the_match_statement_with_multiple_values_and_conditionals'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=the_match_statement_with_multiple_values_and_conditionals"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'the_match_statement_with_multiple_values_and_conditionals'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=the_match_statement_with_multiple_values_and_conditionals"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'underscore_in_a_match_arm'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=underscore_in_a_match_arm"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'underscore_in_a_match_arm'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=underscore_in_a_match_arm"
+                ]
+            }
+        },
+        {
+            "name": "Debug executable 'while_loop'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--bin=while_loop"
+                ]
+            },
+            "args": []
+        },
+        {
+            "name": "Debug unit tests in executable 'while_loop'",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--bin=while_loop"
+                ]
+            }
+        }
+    ]
+}
