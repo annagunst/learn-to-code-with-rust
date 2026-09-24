@@ -139,3 +139,44 @@ fn bake_cake() -> String {
     String::from("Chocolate Mousse")
      */
 }
+
+fn main() {
+    let mut current_meal = String::new();
+    add_flour(&mut current_meal);
+    show_my_meal(&current_meal);
+}
+
+fn add_flour(meal: &mut String) {
+    meal.push_str("Add flour");
+}
+
+fn show_my_meal(meal: &String) {
+    // meal is a reference string
+    println!("Meal steps: {meal}");
+    // meal goes out of scope here
+}
+
+fn main() {
+    let car: String = String::from("Red"); // car remains the owner the whole time
+
+    let ref1: &String = &car; // this is an immutable reference because mut keyword was not used
+    let ref2: &String = &car; // this is also an immutable reference because mut keyword was not used
+
+    println!("{ref1} and {ref2} and {}", &car); //none of the borrows involve the mut keyword, so they all reuse the same data on the haep
+}
+
+fn main() {
+    let mut car: String = String::from("Red"); // car remains the owner
+
+    let ref1: &mut String = &mut car;
+    /*
+    ref_1 borrows the "Red" string and has permission to udpate it.
+    This works because ref1 is not used after this line, thus no potential to change the original string
+    ref1 lifetime ends here
+    */
+    let ref2: &String = &car;
+
+    println!("{ref2}"); //none of the borrows involve the mut keyword, so they all reuse the same data on the heap
+
+    // ref1 scope ends here
+}
