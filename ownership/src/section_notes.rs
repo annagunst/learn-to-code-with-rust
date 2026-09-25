@@ -180,3 +180,60 @@ fn main() {
 
     // ref1 scope ends here
 }
+
+// Ownership with Immutable and Mutable References
+fn main() {
+    let coffee = String::from("Mocha");
+    let a = &coffee; // this is an immutable reference
+    let b = a; // this is also an immutable reference to coffee
+
+    println!("{a} and {b}");
+}
+
+fn main() {
+    let mut coffee: String = String::from("Mocha"); // Coffee is the original owner of the "Mocha" string
+
+    let a: &mut String = &mut coffee; // a is the owner of the mutable reference
+
+    println!("{a}"); // This is valid at this point, a is still the owner of the mutable reference
+
+    let b: &mut String = a; // ownership of the mutable reference is moved to b, this invalidates a
+
+    println!("{a} and {b}"); // This does NOT work because a is no longer valid
+}
+
+// Dangling References
+// EXAMPLE OF A DANGLING REFERENCE VIOLATION
+fn main() {
+    let reference: &String = create_city(); // This is referencing a string that no longer exists
+}
+
+fn create_city() -> &String {
+    let city: String = String::from("New York"); // city is the owner of the "New York" string, it is responsible for deallocation
+    &city // This is the dangling reference, it referring to a string that will go out of scope and is cleared off the heap
+} // city scope ends here, "New York" is deallocated
+// This would work if you used String instead of &String
+
+fn main() {
+    let registrations: [bool; 3] = [true, false, true]; // registration is the owner of the 3 booleans 
+
+    let first: bool = registrations[0]; // Rust creates a full copy and assigns it to the first variable 
+
+    println!("{first} and {registrations:?}"); // both are valid, an ownership move is NOT done 
+
+    let languages: [String; 2] = [String::from("Rust"), String::from("Javascript")]; // languages owns the array, the array owns the values 
+
+    let first: &String = &languages[0].clone(); // borrow a refernce to just the first element 
+
+    println!("{first} and {languages:?}");
+}
+
+fn main() {
+    let registrations: (bool, bool, bool) = (true, false, true); // registration is the owner of the 3 booleans
+    let first: bool = registrations.0; // Rust creates a full copy and assigns it to the first variable
+    println!("{first} and {registrations:?}"); // both are valid, an ownership move is NOT done
+
+    let languages: (String, String) = (String::from("Rust"), String::from("Javascript")); // languages owns the array, the array owns the values
+    let first: &String = &languages.0; // borrow a refernce to just the first element
+    println!("{first} and {languages:?}");
+}

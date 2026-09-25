@@ -1,15 +1,30 @@
 fn main() {
-    let mut car: String = String::from("Red"); // car remains the owner
+    let mut trip = start_trip();
+    visit_philadelphia(&mut trip);
+    trip.push_str(" and ");
+    visit_new_york(&mut trip);
+    trip.push_str(" and ");
+    visit_boston(&mut trip);
+    trip.push('.');
+    show_intinerary(&trip);
+}
 
-    let ref1: &mut String = &mut car;
-    /*
-    ref_1 borrows the "Red" string and has permission to udpate it.
-    This works because ref1 is not used after this line, thus no potential to change the original string
-    ref1 lifetime ends here
-    */
-    let ref2: &String = &car;
+fn start_trip() -> String {
+    String::from("The plan is...")
+}
 
-    println!("{ref2}"); //none of the borrows involve the mut keyword, so they all reuse the same data on the heap
+fn visit_philadelphia(destination_a: &mut String) {
+    destination_a.push_str("Philadelphia");
+}
 
-    // ref1 scope ends here
+fn visit_new_york(destination_b: &mut String) {
+    destination_b.push_str("New York");
+}
+
+fn visit_boston(destination_c: &mut String) {
+    destination_c.push_str("Boston");
+}
+
+fn show_intinerary(trip: &String) {
+    println!("{trip}")
 }
